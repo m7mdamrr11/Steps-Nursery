@@ -1,0 +1,448 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Cairo', sans-serif;
+}
+
+body{
+  background:#fff;
+  color:#333;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* ===== Navbar ===== */
+
+.navbar{
+  background:#ffffff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:70px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:#ff7a59;
+}
+
+/* links */
+.nav{
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#444;
+  font-weight:600;
+  font-size:15px;
+}
+
+.menu-btn{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ===== Hero ===== */
+
+.hero{
+  padding:60px 0;
+}
+
+.hero-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.hero .text{
+  flex:1;
+}
+
+.hero h1{
+  font-size:36px;
+  line-height:1.6;
+  color:#2c2c2c;
+}
+
+.hero p{
+  margin:20px 0;
+  color:#666;
+  line-height:1.8;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:12px 24px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  transition:.3s;
+}
+
+.btn.primary{
+  background:#ff7a59;
+  color:#fff;
+}
+
+.btn.primary:hover{
+  background:#ff5a32;
+}
+
+.btn.outline{
+  border:2px solid #ff7a59;
+  color:#ff7a59;
+}
+
+.btn.outline:hover{
+  background:#ff7a59;
+  color:#fff;
+}
+
+.hero .image{
+  flex:1;
+  text-align:center;
+}
+
+.hero .image img{
+  width:100%;
+  max-width:420px;
+  border-radius:20px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px){
+
+  .hero-content{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#fff;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding:20px 0;
+    display:none;
+  }
+
+  .nav.active{
+    display:flex;
+  }
+
+}
+
+/* ===== Programs Section ===== */
+
+.programs{
+  padding:70px 0;
+  background:#fdf7f5;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:28px;
+  color:#2c2c2c;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#777;
+  font-size:15px;
+}
+
+.programs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+}
+
+.program-card{
+  background:#fff;
+  padding:25px 20px;
+  border-radius:16px;
+  text-align:center;
+  transition:.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.program-card:hover{
+  transform:translateY(-6px);
+}
+
+.program-card h3{
+  color:#ff7a59;
+  margin-bottom:8px;
+}
+
+.program-card span{
+  display:block;
+  font-size:13px;
+  color:#999;
+  margin-bottom:10px;
+}
+
+.program-card p{
+  font-size:14px;
+  color:#555;
+  line-height:1.7;
+}
+
+/* ===== Activities Section ===== */
+
+.activities{
+  padding:70px 0;
+  background:#ffffff;
+}
+
+.activities-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+}
+
+.activity-card{
+  background:#fdf7f5;
+  padding:25px 20px;
+  border-radius:16px;
+  text-align:center;
+  transition:.3s;
+}
+
+.activity-card:hover{
+  transform:translateY(-6px);
+}
+
+.activity-card .icon{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.activity-card h3{
+  color:#ff7a59;
+  margin-bottom:8px;
+}
+
+.activity-card p{
+  font-size:14px;
+  color:#555;
+  line-height:1.7;
+}
+
+/* ===== Gallery Section ===== */
+
+.gallery{
+  padding:70px 0;
+  background:#fdf7f5;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:15px;
+}
+
+.gallery-item{
+  overflow:hidden;
+  border-radius:14px;
+  position:relative;
+}
+
+.gallery-item img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:.4s;
+  display:block;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+
+/* ===== Teachers Section ===== */
+
+.teachers{
+  padding:70px 0;
+  background:#ffffff;
+}
+
+.teachers-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:25px;
+}
+
+.teacher-card{
+  text-align:center;
+  background:#fdf7f5;
+  padding:20px;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.teacher-card:hover{
+  transform:translateY(-6px);
+}
+
+.teacher-card .img{
+  width:120px;
+  height:120px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.teacher-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.teacher-card h3{
+  font-size:16px;
+  color:#333;
+  margin-bottom:5px;
+}
+
+.teacher-card span{
+  font-size:13px;
+  color:#777;
+}
+
+/* ===== Registration Section ===== */
+
+.registration{
+  padding:70px 0;
+  background:#fdf7f5;
+}
+
+.reg-form{
+  max-width:700px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.form-group input,
+.form-group select{
+  width:100%;
+  padding:12px 15px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:14px;
+  outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+  border-color:#ff7a59;
+}
+
+.form-group.full{
+  grid-column:1 / -1;
+  text-align:center;
+}
+
+.form-group button{
+  padding:12px 40px;
+  border:none;
+  background:#ff7a59;
+  color:#fff;
+  font-size:15px;
+  border-radius:25px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.form-group button:hover{
+  background:#ff5a32;
+}
+
+@media(max-width:600px){
+  .reg-form{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ===== Contact Section ===== */
+
+.contact{
+  padding:70px 0;
+  background:#ffffff;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:20px;
+}
+
+.contact-box{
+  background:#fdf7f5;
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.contact-box h3{
+  color:#ff7a59;
+  margin-bottom:10px;
+}
+
+.contact-box p{
+  color:#555;
+  font-size:14px;
+}
+
+/* ===== Footer ===== */
+
+.footer{
+  background:#ff7a59;
+  color:#fff;
+  text-align:center;
+  padding:20px 0;
+  font-size:14px;
+}
